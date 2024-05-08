@@ -1,0 +1,22 @@
+##Created a topic called kafka-topic
+>.\bin\windows\kafka-topics.bat --create --topic kafka-topic --bootstrap-server localhost:9092
+Created topic kafka-topic.
+
+## Some events are written to kafka-server
+>.\bin\windows\kafka-console-producer.bat --topic kafka-topic --bootstrap-server localhost:9092
+>hello wordld. my first Kafka program.
+>Kafka Topic event
+>demo1
+>Terminate batch job (Y/N)? Y
+
+## Reading the events from kafka-server
+C:\Programs\kafka>.\bin\windows\kafka-console-consumer.bat --topic kafka-topic --bootstrap-server localhost:9092
+Processed a total of 0 messages
+Terminate batch job (Y/N)? y
+
+
+C:\Programs\kafka>.\bin\windows\kafka-console-consumer.bat --topic kafka-topic --from-beginning --bootstrap-server localhost:9092
+hello wordld. my first Kafka program.
+Kafka Topic event
+demo1
+
